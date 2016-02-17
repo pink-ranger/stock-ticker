@@ -1,3 +1,4 @@
 Date and Time                 Change detail
 Feb 9, 2016   [4:02pm]        Initial commit
 Feb 10, 2016  [12:32pm]       Added a readme and a changelog file
+Feb 16, 2016  [6:32pm]        Added links for bootstrap(3.3.6) and jquery(1.12.0)
