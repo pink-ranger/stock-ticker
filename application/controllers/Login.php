@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends Application {
+class Login extends Application {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +20,7 @@ class Welcome extends Application {
 	 */
 	public function index()
 	{
-            $this->data['pagebody'] = 'welcome';
+            $this->data['pagebody'] = 'login';
             $this->render();
 	}
 }
