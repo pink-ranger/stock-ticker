@@ -20,7 +20,25 @@ class Welcome extends Application {
 	 */
 	public function index()
 	{
-            $this->data['pagebody'] = 'welcome';
-            $this->render();
+
+		//$this->load->model("Stocks");
+
+	 	$stocks = $this->stocks->all();
+    foreach($stocks as $row)
+    {
+      $stockList[] = $row;
+    }
+
+    $players = $this->players->all();
+    foreach($players as $row)
+    {
+      $playerList[] = $row;
+    }
+
+
+    $this->data['pagebody'] = 'welcome';
+    $this->data['stocks'] = $stockList;
+    $this->data['players'] = $playerList;
+    $this->render();
 	}
 }
