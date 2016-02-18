@@ -1,18 +1,12 @@
 <div id="contents">
-    <div id="tagline" class="clearfix">
-        <h1>This is the Login page</h1>
-        <div>
-                <p>
-                        Please enter your username and password.
-                </p>
-                <form>
-                <fieldset>
-                 <legend>Login:</legend>
-                 Username: <input type="text"><br>
-                 Password: <input type="text"><br>
-                </fieldset>
-               </form>
-               <button type="button" onclick="alert('Hello world!')">Log In</button>
-        </div>
+    <h1>Login</h1>
+    <div class="dropdown">
+      <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Login
+      <span class="caret"></span></button>
+      <ul class="dropdown-menu">
+      {players}
+        <li><a href="/login/log_in/{Player}">{Player}</a></li>
+      {/players}
+      </ul>
     </div>
 </div>

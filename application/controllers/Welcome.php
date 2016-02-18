@@ -20,24 +20,21 @@ class Welcome extends Application {
 	 */
 	public function index()
 	{
-
-		//$this->load->model("Stocks");
-
 	 	$stocks = $this->stocks->all();
-    foreach($stocks as $row)
+    foreach($stocks as $stock)
     {
-      $stockList[] = $row;
+      $stockArr[] = $stock;
     }
 
     $players = $this->players->all();
-    foreach($players as $row)
+    foreach($players as $player)
     {
-      $playerList[] = $row;
+      $playerArr[] = $player;
     }
 
     $this->data['pagebody'] = 'welcome';
-    $this->data['stocks'] = $stockList;
-    $this->data['players'] = $playerList;
+    $this->data['stocks'] = $stockArr;
+    $this->data['players'] = $playerArr;
     $this->render();
 	}
 }
