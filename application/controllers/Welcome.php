@@ -35,7 +35,6 @@ class Welcome extends Application {
       $playerList[] = $row;
     }
 
-
     $this->data['pagebody'] = 'welcome';
     $this->data['stocks'] = $stockList;
     $this->data['players'] = $playerList;

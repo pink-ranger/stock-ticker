@@ -1,8 +1,8 @@
 <div id="contents">
-    <div id="tagline" class="clearfix">
-        <h1>This is the home page</h1>
-        <div>
-            <table class="table">
+    <h1>Home</h1>
+    <div class="row">
+        <div class="col-md-6 table-responsive">
+            <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>Stock</th>
@@ -13,14 +13,14 @@
                     {stocks}
                     <tr>
                         <td><a href="/stocks/{Code}">{Code}</a></td>
-                        <td>{Value}</td>
+                        <td>${Value}</td>
                     </tr>
                     {/stocks}
                 </tbody>
             </table>
         </div>
-        <div>
-            <table class="table">
+        <div class="col-md-6 table-responsive">
+            <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
                         <th>Player</th>
@@ -32,8 +32,8 @@
                     {players}
                     <tr>
                         <td><a href="/player/{Player}">{Player}</a></td>
-                        <td>{Equity}</td>
-                        <td>{Cash}</td>
+                        <td>${Equity}</td>
+                        <td>${Cash}</td>
                     </tr>
                     {/players}
                 </tbody>
