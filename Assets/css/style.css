@@ -30,7 +30,7 @@ img {
 	visibility:hidden;
 }
 .btn {
-	background: url(../images/bg-button.png) no-repeat;
+	/*background: url(../images/bg-button.png) no-repeat;*/
 	background-position: 0 -70px;
 	color: #fff;
 	display: inline-block;

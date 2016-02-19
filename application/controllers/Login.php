@@ -18,9 +18,29 @@ class Login extends Application {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index()
+	function index()
 	{
-            $this->data['pagebody'] = 'login';
-            $this->render();
+    $players = $this->players->all();
+    foreach($players as $player)
+    {
+    	$playerArr[] = $player;
+    }
+
+    $this->data['pagebody'] = 'login';
+    $this->data['players'] = $playerArr;
+    $this->render();
+	}
+
+	function log_in($Player = null)
+	{
+		if ($Player != null)
+		{
+			$this->session->set_userdata('player', $Player);
+			redirect("/Players/$Player");
+		}
+		else
+		{
+			redirect("/login");	
+		}
 	}
 }

@@ -17,15 +17,29 @@ class Application extends CI_Controller {
 		$this->data = array();
 		$this->data['title'] = 'Demo Stock Ticker';
 		$this->load->library('parser');
+
+    $session_id = $this->session->userdata('player');
+		if ($session_id)
+		{
+			$this->data['playername'] = $session_id;
+		}
 	}
 	/**
 	 * Render this page
 	 */
 	function render()
 	{
+		if (isset($this->data['playername']))
+		{
+			$this->data['header'] = $this->parser->parse('_header_loggedin', $this->data, true);
+		}
+		else
+		{
+			$this->data['header'] = $this->parser->parse('_header', $this->data, true);
+		} 
 		$this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 		$this->data['data'] = &$this->data;
-		$this->parser->parse('template', $this->data);
+		$this->parser->parse('_template', $this->data);
 	}
 }
 /* End of file MY_Controller.php */
