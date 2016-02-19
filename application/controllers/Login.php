@@ -36,7 +36,7 @@ class Login extends Application {
 		if ($Player != null)
 		{
 			$this->session->set_userdata('player', $Player);
-			redirect("/portfolio/$Player");
+			redirect("/Players/$Player");
 		}
 		else
 		{
