@@ -1,7 +1,17 @@
 <div id="contents">
     <div id="tagline" class="clearfix">
-    
         <div>
+        
+            <div>
+                {playerName}
+                    <h1>Player: {Player}
+                    <br/>
+                        <small class="text-muted">Cash: {Cash}</small>
+                        <small class="text-muted">Equity: {Equity}</small>
+                    </h1>
+                {/playerName}
+            </div>
+    
             <div class="dropdown">
                 <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Players
                 <span class="caret"></span></button>
@@ -12,13 +22,7 @@
                 </ul>
             </div>
             
-            <div>
-                {playerName}
-                    <h2>Player: {Player}</h2>
-                    <h3>Cash: {Cash}</h3>
-                    <h3>Equity: {Equity}</h3>
-                {/playerName}
-            </div>
+            <br/>
             
             <div class="row">
                 <div class="col-md-12 table-responsive">
