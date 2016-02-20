@@ -1,5 +1,7 @@
 Date and Time                 Change detail
+Feb 19, 2016  [7:49pm]        Additional comments added to views.
 Feb 19, 2016  [6:43pm]        Add comment to portfolio code
+Feb 19, 2016  [4:15pm]        History page implementation
 Feb 19, 2016  [3:19pm]        UI fix for default portfolio page
 Feb 19, 2016  [2:05pm]        Fix navbar CSS loading
 Feb 19, 2016  [11:32am]       Modified the UI for readability
