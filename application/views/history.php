@@ -13,7 +13,7 @@
     <br />
 
     <div class="row">
-        <div class="col-md-6 table-responsive">
+        <div class="table-responsive">
             <table class="table table-bordered table-striped">
                 <thead>
                     <tr>
@@ -36,5 +36,4 @@
             </table>
         </div>
     </div>
-    
 </div>
