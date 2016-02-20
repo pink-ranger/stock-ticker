@@ -1,6 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/** 
+ * Displays all users in a database and display a player's info 
+ * if player is selected or logged in. It displays player's name, 
+ * cash, equity, and all their transactions.
+ */
 class Portfolio extends Application {
 
 	public function index($playerkey = null)
@@ -61,5 +66,4 @@ class Portfolio extends Application {
         
         $this->render();
 	}
-    
 }
