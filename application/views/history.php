@@ -1,9 +1,11 @@
 <div id="contents">
     <h1>History</h1>
+    <!-- Dropdown for navigating to other stock history pages. -->
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Stocks
         <span class="caret"></span></button>
         <ul class="dropdown-menu">
+	<!-- Loop through all stock names and make link to the page. -->
         {stockNames}
             <li><a href="/stocks/{Code}">{Code}</a></li>
         {/stockNames}
@@ -24,6 +26,7 @@
                     </tr>
                 </thead>
                 <tbody>
+		    <!-- Display all data from movements table. -->
                     {movements}
                     <tr>
                         <td>{Datetime}</td>

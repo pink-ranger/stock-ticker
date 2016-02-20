@@ -1,4 +1,6 @@
 <div id="contents">
+
+    <!-- Display player information: name, cash, and equity. -->
     <div>
         {playerName}
             <h1>Player: {Player}
@@ -9,6 +11,7 @@
         {/playerName}
     </div>
 
+    <!-- Dropdown for navigating to other stock player pages. -->
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Players
         <span class="caret"></span></button>
@@ -21,6 +24,7 @@
     
     <br/>
     
+    <!-- The table that displays all the player's transactions. -->
     <div class="row">
         <div class="col-md-12 table-responsive">
             <table class="table table-bordered table-striped">
