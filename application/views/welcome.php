@@ -1,3 +1,5 @@
+<!-- Display two tables. One with a list of all the stock and their value and 
+another with a list of players, their equity and cash. -->
 <div id="contents">
     <h1>Home</h1>
     <div class="row">
