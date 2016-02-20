@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'welcome';
-$route['stocks/(:any)'] = 'history/index/$1';
+$route['stocks/(:any)'] = 'history/displayStock/$1';
 $route['Players/(:any)'] = 'portfolio/index/$1';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
