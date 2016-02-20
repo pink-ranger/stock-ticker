@@ -13,7 +13,7 @@
       <a href="/portfolio">Portfolio</a>
     </li>
     <li>
-      <a href="/logout">Log Out</a>
+      {playername}: <a href="/logout"> Log Out</a>
     </li>
   </ul>
 </div>
