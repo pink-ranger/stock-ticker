@@ -1,5 +1,4 @@
 <div id="contents">
-
     <h1>History</h1>
     <div class="dropdown">
         <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Stocks

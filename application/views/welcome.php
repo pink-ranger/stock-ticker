@@ -31,7 +31,7 @@
                 <tbody>
                     {players}
                     <tr>
-                        <td><a href="/player/{Player}">{Player}</a></td>
+                        <td><a href="/Players/{Player}">{Player}</a></td>
                         <td>${Equity}</td>
                         <td>${Cash}</td>
                     </tr>
