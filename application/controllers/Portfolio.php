@@ -1,43 +1,17 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+/** 
+ * Displays all users in a database and display a player's info 
+ * if player is selected or logged in. It displays player's name, 
+ * cash, equity, and all their transactions.
+ */
 class Portfolio extends Application {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see https://codeigniter.com/user_guide/general/urls.html
-	 */
 	public function index($playerkey = null)
 	{
-        // Get the player info
-        if ($playerkey == null)
-		{
-            $sessInfo = $this->session->all_userdata();
-            if (array_key_exists('player', $sessInfo)) 
-            {
-                $playerkey = $sessInfo["player"];
-            }
-            else{
-                redirect("/login");	
-            }
-		}
-		else
-		{
-		}
-            $playerInfo = array();
-            $playerInfo[] = $this->players->get($playerkey);
-        
+        // Set page info data
+        $this->data['pagebody'] = 'portfolio';
         
         // Get the list of players
         $playersArray = array();
@@ -46,25 +20,50 @@ class Portfolio extends Application {
         {
           $playersArray[] = $player;
         }
+        $this->data['playerList'] = $playersArray;
+        
+        // Get the player key
+        $playerInfo = array();
+        if ($playerkey == null)
+		{
+            $sessInfo = $this->session->all_userdata();
+            if (array_key_exists('player', $sessInfo)) 
+            {
+                $playerkey = $sessInfo["player"];
+            }
+		}
+        
+        // Get player info 
+        if($playerkey != null)
+        {
+            $playerInfo[] = $this->players->get($playerkey);
+        }
+        else
+        {
+            $pInfo = new stdClass;
+            $pInfo->Player = "Select a player";
+            $pInfo->Cash = "n/a";
+            $pInfo->Equity = "n/a";
+            $playerInfo[0] = $pInfo;
+        }
+        $this->data['playerName'] = $playerInfo;
         
         // Get the list of transactions for the player
-        $this->db->select('*');
-        $this->db->from('transactions');
-        $this->db->where('player', $playerkey);
-        $query = $this->db->get();
-        
         $transactions = array();
-        foreach($query->result() as $row) 
+        if($playerkey != null) 
         {
-            $transactions[] = $row;
+            $this->db->select('*');
+            $this->db->from('transactions');
+            $this->db->where('player', $playerkey);
+            $query = $this->db->get();
+            
+            foreach($query->result() as $row) 
+            {
+                $transactions[] = $row;
+            }
         }
-        
-        // Add data
-        $this->data['playerList'] = $playersArray;
         $this->data['transactions'] = $transactions;
-        $this->data['playerName'] = $playerInfo;
-        $this->data['pagebody'] = 'portfolio';
+        
         $this->render();
 	}
-    
 }
