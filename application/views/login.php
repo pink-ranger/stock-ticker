@@ -1,3 +1,5 @@
+<!-- Display dropdown with a list of players. Selecting a player simulates 
+the login process -->
 <div id="contents">
     <h1>Login</h1>
     <div class="dropdown">
