@@ -23,6 +23,12 @@ class Welcome extends Application {
     $this->data['pagebody'] = 'welcome';
     $this->data['stocks'] = $stockArr;
     $this->data['players'] = $playerArr;
+
+    $this->data['round'] = $this->game_manager->getGameState()['round'];
+    $this->data['movements'] = $this->game_manager->get5MostRecentMovements();
+    $this->data['transactions'] = $this->game_manager->get5MostRecentTransactions();
+
+
     $this->render();
 	}
 }

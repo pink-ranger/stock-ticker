@@ -16,7 +16,7 @@ class Game_manager extends CI_Model {
    */
   function getGameState()
   {
-    echo "Game State";
+    //echo "Game State";
 
     $gameStateArray = array();
     $url = BSX . 'status';
@@ -32,7 +32,7 @@ class Game_manager extends CI_Model {
     $gameStateArray['now'] = (string)$gameState->now;
     $gameStateArray['countdown'] = (int)$gameState->countdown;
 
-    var_dump($gameStateArray);
+    //var_dump($gameStateArray);
     return $gameStateArray;
   }
 
@@ -72,7 +72,7 @@ class Game_manager extends CI_Model {
    */
   function get5MostRecentMovements()
   {
-    echo "Latest Movements";
+    //echo "Latest Movements";
     $lastestMovementArray = array();
     $movementArray = self::getAllStockMovements();
       
@@ -91,7 +91,7 @@ class Game_manager extends CI_Model {
       }
     }
     
-    var_dump($lastestMovementArray);
+    //var_dump($lastestMovementArray);
     return $lastestMovementArray;
   }
 
@@ -149,6 +149,7 @@ class Game_manager extends CI_Model {
       $tempArray['agent'] = $row['agent'];
       $tempArray['player'] = $row['player'];
       $tempArray['trans'] = $row['trans'];
+      $tempArray['stock'] = $row['stock'];
       $tempArray['quantity'] = (int)$row['quantity'];
       
       array_push($transactionArray, $tempArray);
@@ -162,7 +163,7 @@ class Game_manager extends CI_Model {
    */
   function get5MostRecentTransactions()
   {
-    echo "Latest Transactions";
+    //echo "Latest Transactions";
 
     $lastestTransactionArray = array();
     $transactionArray = self::getAllStockTransactions();
@@ -182,7 +183,7 @@ class Game_manager extends CI_Model {
       }
     }
 
-    var_dump($lastestTransactionArray);
+    //var_dump($lastestTransactionArray);
     return $lastestTransactionArray;
   }
 
