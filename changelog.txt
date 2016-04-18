@@ -1,16 +1,18 @@
-Date and Time                 Change detail
-Feb 19, 2016  [8:49pm]        Additional comments added to views.
-Feb 19, 2016  [7:49pm]        Additional comments added to views.
-Feb 19, 2016  [6:43pm]        Add comment to portfolio code
-Feb 19, 2016  [4:15pm]        History page implementation
-Feb 19, 2016  [3:19pm]        UI fix for default portfolio page
-Feb 19, 2016  [2:05pm]        Fix navbar CSS loading
-Feb 19, 2016  [11:32am]       Modified the UI for readability
-Feb 19, 2016  [11:14am]       Implemented player portfolio page
-Feb 19, 2016  [6:20am]        added comments to controllers and models
-Feb 19, 2016  [6:16am]        Added the players name to the nav bar when logged in
-Feb 18, 2016  [6:20am]        Styled home page
-Feb 17, 2016  [4:20pm]        models created and Home page tables added
-Feb 16, 2016  [6:32pm]        Added links for bootstrap(3.3.6) and jquery(1.12.0)
-Feb 10, 2016  [12:32pm]       Added a readme and a changelog file
-Feb 9, 2016   [4:02pm]        Initial commit
+Date and Time                  Change detail
+April 17, 2016 [1:00pm]        Add game round and 5 latest transactions/movements to dashboard.
+April 17, 2016 [9:00am]        Retrieve data from server, buy, sell, register
+Feb 19, 2016   [8:49pm]        Additional comments added to views.
+Feb 19, 2016   [7:49pm]        Additional comments added to views.
+Feb 19, 2016   [6:43pm]        Add comment to portfolio code
+Feb 19, 2016   [4:15pm]        History page implementation
+Feb 19, 2016   [3:19pm]        UI fix for default portfolio page
+Feb 19, 2016   [2:05pm]        Fix navbar CSS loading
+Feb 19, 2016   [11:32am]       Modified the UI for readability
+Feb 19, 2016   [11:14am]       Implemented player portfolio page
+Feb 19, 2016   [6:20am]        added comments to controllers and models
+Feb 19, 2016   [6:16am]        Added the players name to the nav bar when logged in
+Feb 18, 2016   [6:20am]        Styled home page
+Feb 17, 2016   [4:20pm]        models created and Home page tables added
+Feb 16, 2016   [6:32pm]        Added links for bootstrap(3.3.6) and jquery(1.12.0)
+Feb 10, 2016   [12:32pm]       Added a readme and a changelog file
+Feb 9, 2016    [4:02pm]        Initial commit
